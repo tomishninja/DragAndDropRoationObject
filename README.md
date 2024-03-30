@@ -7,7 +7,7 @@ This system is designed to be dropped into GUI's and was designed to function wi
 
 Users can click on the spheres shown in this system to rotate an object or drag it in the direction to be rotated. 
 
-# Updated Object Baseed On Rotating the object
+# Updated Object Based on Rotating the Object
 This system will also optionally update it's self if another tool rotates the object by tracking the roation of the object and updating as required.
 A demo of this can be seen below:
 
