@@ -54,18 +54,18 @@ namespace ClickAndDragRotation
                 {
                     Debug.Log(lastRotationOfObjects[index].eulerAngles);
                     Vector3 axis = lastRotationOfObjects[index].eulerAngles - objectsToRotate[index].GetValidRotationAsEuler();
-                    ForceUpdateAllObjetsToNewAngleBasedOnObjectAtIndex(axis);
+                    ForceUpdateAllObjetsToNewAngleBasedOnObjectAtIndex(axis, objectsToRotate[index].RotatableObjectTransform);
                     return;
                 }
             }
         }
 
-        internal void ForceUpdateAllObjetsToNewAngleBasedOnObjectAtIndex(Vector3 AmountToRotate)
+        internal void ForceUpdateAllObjetsToNewAngleBasedOnObjectAtIndex(Vector3 AmountToRotate, Transform exceptForThis)
         {
             // force all the related objects to repair them selves
-            Xaxis.CalculateTheRotationOfAllTheObjects(AmountToRotate.x);
-            Yaxis.CalculateTheRotationOfAllTheObjects(AmountToRotate.y);
-            Zaxis.CalculateTheRotationOfAllTheObjects(AmountToRotate.z);
+            Xaxis.CalculateTheRotationOfAllTheObjects(AmountToRotate.x, exceptForThis);
+            Yaxis.CalculateTheRotationOfAllTheObjects(AmountToRotate.y, exceptForThis);
+            Zaxis.CalculateTheRotationOfAllTheObjects(AmountToRotate.z, exceptForThis);
 
             UpdateAllObjectsLastTransforms();
         }

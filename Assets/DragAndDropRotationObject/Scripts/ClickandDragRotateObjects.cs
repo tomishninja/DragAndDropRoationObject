@@ -70,6 +70,18 @@ namespace ClickAndDragRotation
             }
         }
 
+        internal void CalculateTheRotationOfAllTheObjects(float rotationAmount, Transform skip)
+        {
+            // Rotate each object in the array
+            for (int index = 0; index < objectsToRotate.Length; index++)
+            {
+                if (!objectsToRotate[index].RotatableObjectTransform.Equals(skip))
+                {
+                    objectsToRotate[index].RotateObject(getDir(), rotationAmount);
+                }
+            }
+        }
+
         private void DetermineMouseInput()
         {
             // Check if mouse button is pressed down
