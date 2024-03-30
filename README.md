@@ -10,4 +10,5 @@ Users can click on the spheres shown in this system to rotate an object or drag 
 # Updated Object Baseed On Rotating the object
 This system will also optionally update it's self if another tool rotates the object by tracking the roation of the object and updating as required.
 A demo of this can be seen below:
-![A GIF showing the system should be here](ForReadMe/RotatingNotTheObject)
+
+![A GIF showing the system should be here](ForReadMe/RotatingNotTheObject.gif)
